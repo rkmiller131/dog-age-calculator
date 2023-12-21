@@ -3,11 +3,6 @@ import React from 'react';
 import Image from 'next/image'
 import { useTheme } from '../../Theme/ThemeProvider';
 
-// note, set up a division between what home has in it:
-// Navbar
-// cards <- use client and access context there, leaving the rest to ssr
-// Footer
-
 const Test = () => {
   const { labTheme, toggleTheme } = useTheme();
   return (
