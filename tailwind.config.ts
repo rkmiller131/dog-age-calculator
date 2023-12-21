@@ -22,6 +22,7 @@ const config: Config = {
     },
     backgroundColor: {
       'card-black': '#231B2A',
+      'bubble': 'rgba(211, 211, 211, 0.2)'
     },
     fontFamily: {
       'primary': ['Fredoka', 'sans-serif'],
@@ -30,14 +31,27 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, #FDF6CB, #FFD648)',
+        'gradient': 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)',
         'main-bg': 'url("/park.png")',
         'dogs': 'url("/dogs.png")',
         'labs': 'url("/labs.png")',
       },
       borderRadius: {
-        'sm': '0.5rem',
-        'l': '1.5rem',
-      }
+        'sm': '0.5rem 0.5rem',
+        'l': '1.4rem 1.4rem',
+      },
+      boxShadow: {
+        'drop': '-4px 4px 4px rgba(0, 0, 0, 0.5)',
+      },
+      animation: {
+        'swing': 'swing 3s ease infinite',
+      },
+      keyframes: {
+        'swing': {
+          '0%, 100%': { transform: 'rotate(8deg) translate(-5px, -2px)' },
+          '50%': { transform: 'rotate(-8deg) translate(10px, -8px)' },
+        },
+      },
     },
   },
   plugins: [],

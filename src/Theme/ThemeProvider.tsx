@@ -28,8 +28,6 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     toggleTheme
   }
 
-  console.log('contextValue being set is: ', contextValue);
-
   return (
     <ThemeContext.Provider value={contextValue}>
       {children}

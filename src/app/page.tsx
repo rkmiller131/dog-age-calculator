@@ -1,19 +1,30 @@
-'use client'
 import React from 'react';
-import { useTheme } from '../Theme/ThemeProvider';
+import Header from './Header'
+import Test from './TestRoute'
+import Footer from './footer/Footer'
 
 // note, set up a division between what home has in it:
 // Navbar
 // cards <- use client and access context there, leaving the rest to ssr
 // Footer
 
+// tailwind config not available for ssr components, so used inline styling here
+const mainStyle: React.CSSProperties = {
+  backgroundImage: 'url("/park.png")',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+}
 const Home = () => {
-  const { labTheme, toggleTheme } = useTheme();
   return (
-    <div>
-      <h1>{`Lab theme active? ${labTheme}`}</h1>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-    </div>
+    <main style={mainStyle}>
+      <Header />
+      <Test />
+      <Footer />
+    </main>
   );
 };
 
