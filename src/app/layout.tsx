@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '../Theme/ThemeProvider'
-import './globals.css'
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Dog Age Calculator',
