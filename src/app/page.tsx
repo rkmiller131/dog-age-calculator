@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header'
-import Test from './TestRoute'
+import Test from './mainContent/PageContent'
 import Footer from './footer/Footer'
 
 // note, set up a division between what home has in it:

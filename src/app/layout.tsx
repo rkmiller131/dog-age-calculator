@@ -14,12 +14,6 @@ type LayoutProps = {
 }
 
 const bodyStyle: React.CSSProperties = {
-  // backgroundImage: 'url("/park.png")',
-  // backgroundSize: 'cover',
-  // backgroundPosition: 'center',
-  // backgroundRepeat: 'no-repeat',
-  // minHeight: "100vh",
-  // overflow: 'scroll',
   display: 'flex',
   flexDirection: 'column',
   flexWrap: 'wrap',
@@ -29,11 +23,9 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body style={bodyStyle}>
-        {/* <Header /> */}
         <ThemeProvider>
           {children}
         </ThemeProvider>
-        {/* <Footer /> */}
       </body>
     </html>
   )
