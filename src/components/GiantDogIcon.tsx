@@ -2,9 +2,9 @@ import React, { CSSProperties, useState } from 'react';
 
 type GiantDogIconProps = {
   isActive: boolean;
+  isHovered: boolean;
 }
-const GiantDogIcon = ({ isActive }: GiantDogIconProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
 
   const color = "#FBCA6B";
   const hoverColor = "#7BDBFF";
@@ -15,13 +15,6 @@ const GiantDogIcon = ({ isActive }: GiantDogIconProps) => {
     transform: 'scaleX(-1)',
   };
 
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-
-  const handleLeave = () => {
-    setIsHovered(false);
-  };
   return (
     <svg
       version="1.1"
@@ -32,8 +25,6 @@ const GiantDogIcon = ({ isActive }: GiantDogIconProps) => {
       viewBox="0 0 1024 1024"
       enableBackground="new 0 0 1024 1024"
       xmlSpace="preserve"
-      onMouseEnter={handleHover}
-      onMouseLeave={handleLeave}
       style={svgStyles}
       >
         <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"

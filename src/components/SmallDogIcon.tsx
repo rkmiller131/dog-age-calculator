@@ -2,9 +2,9 @@ import React, { CSSProperties, useState } from 'react';
 
 type SmallDogIconProps = {
   isActive: boolean;
+  isHovered: boolean;
 }
-const SmallDogIcon = ({ isActive }: SmallDogIconProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
 
   const color = "#FBCA6B";
   const hoverColor = "#7BDBFF";
@@ -14,13 +14,6 @@ const SmallDogIcon = ({ isActive }: SmallDogIconProps) => {
     transition: 'stroke 0.3s',
   };
 
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-
-  const handleLeave = () => {
-    setIsHovered(false);
-  };
   return (
     <svg
       version="1.1"
@@ -31,8 +24,6 @@ const SmallDogIcon = ({ isActive }: SmallDogIconProps) => {
       viewBox="0 0 1024 1024"
       enableBackground="new 0 0 1024 1024"
       xmlSpace="preserve"
-      onMouseEnter={handleHover}
-      onMouseLeave={handleLeave}
       style={svgStyles}
       >
       <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
