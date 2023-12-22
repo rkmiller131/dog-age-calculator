@@ -8,19 +8,9 @@ import Footer from './footer/Footer'
 // cards <- use client and access context there, leaving the rest to ssr
 // Footer
 
-// tailwind config not available for ssr components, so used inline styling here
-const mainStyle: React.CSSProperties = {
-  backgroundImage: 'url("/park.png")',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  minHeight: '100vh',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-}
 const Home = () => {
   return (
-    <main style={mainStyle}>
+    <main>
       <Header />
       <Test />
       <Footer />

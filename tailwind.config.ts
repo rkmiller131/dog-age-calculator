@@ -5,10 +5,12 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
-      sm: '480px',
+      xs: '250px',
+      sm: '320px',
       md: '768px',
       lg: '976px',
       xl: '1440px',
@@ -19,8 +21,11 @@ const config: Config = {
       'blue': '#7BDBFF',
       'faded-blue': '#6C8E9A',
       'orange': '#C8652E',
+      'drk-blue': '#231B2A'
     },
     backgroundColor: {
+      'yellow-btn': '#FCD372',
+      'blue-btn': '#7BDBFF',
       'card-black': '#231B2A',
       'bubble': 'rgba(211, 211, 211, 0.2)'
     },
@@ -31,6 +36,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, #FDF6CB, #FFD648)',
+        'yellow-gradient': 'linear-gradient(rgba(248, 212, 141, 0.4), transparent)',
         'gradient': 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)',
         'main-bg': 'url("/park.png")',
         'dogs': 'url("/dogs.png")',
@@ -48,7 +54,7 @@ const config: Config = {
       },
       keyframes: {
         'swing': {
-          '0%, 100%': { transform: 'rotate(8deg) translate(-5px, -2px)' },
+          '0%, 100%': { transform: 'rotate(8deg) translate(-12px, -2px)' },
           '50%': { transform: 'rotate(-8deg) translate(10px, -8px)' },
         },
       },
