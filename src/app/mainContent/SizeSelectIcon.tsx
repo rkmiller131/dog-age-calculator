@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import dynamic from 'next/dynamic'
+import SmallDogIcon from '../../components/SmallDogIcon'
+import MediumDogIcon from '../../components/MediumDogIcon'
+import LargeDogIcon from '../../components/LargeDogIcon'
+import GiantDogIcon from '../../components/GiantDogIcon'
 
 type SizeSelectionProps = {
   icon: string;
@@ -21,32 +24,40 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
     setIsHovered(false);
   };
 
-  const DogIconComponent = dynamic(() =>
-    import(`../../components/${icon.charAt(0).toUpperCase()}Icon`)) as React.FC<{ isActive: boolean; isHovered: boolean }>;
-
   // size of the icon inside its selection box
-  const tw = (() => {
-    switch(icon) {
-      case 'smallDog':
-        return "w-[60%]";
-      case 'mediumDog':
-        return "w-[80%]";
-      default:
-        return "w-[100%]";
-    }
-  })();
+  let IconComponent;
+  let tw;
+  switch(icon) {
+    case 'smallDog':
+      IconComponent = SmallDogIcon
+      tw = "w-[60%]";
+      break;
+    case 'mediumDog':
+      IconComponent = MediumDogIcon
+      tw = "w-[80%]";
+      break;
+    case 'largeDog':
+      IconComponent = LargeDogIcon
+      tw = "w-[100%]";
+      break;
+    default:
+      IconComponent = GiantDogIcon
+      tw = "w-[100%]";
+  }
 
   return (
     <div
+      role="button"
+      tabIndex={0}
       onClick={handleClick}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
       className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? "border-blue text-blue" : "border-yellow"}`}
     >
       <div className={tw}>
-        <DogIconComponent isActive={isActive} isHovered={isHovered}/>
+        <IconComponent isActive={isActive} isHovered={isHovered}/>
       </div>
-      <span>{description}</span>
+      <span aria-label={description} role="img">{description}</span>
     </div>
   )
 }

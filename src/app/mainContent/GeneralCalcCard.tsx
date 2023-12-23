@@ -9,7 +9,7 @@ const PageContent = () => {
   const [dogAgeInput, setDogAgeInput] = useState<number | string>('');
   const [convertedAge, setConvertedAge] = useState<number | null>(null);
 
-  // Error message:
+  // Error messages:
   const [noSizeSelected, setNoSizeSelected] = useState<boolean>(false);
 
   useEffect(() => {
@@ -41,6 +41,8 @@ const PageContent = () => {
           <span>Size of Dog</span>
           {noSizeSelected && <span className="pl-[0.5rem] text-3xl text-error-red">*</span>}
         </div>
+
+        {/* Icon size selection boxes */}
         <div className="w-[100%] flex flex-wrap justify-evenly mt-[0.5rem]">
           {sizeIcons.map((item, index) => (
             <SizeSelectIcon
@@ -52,6 +54,7 @@ const PageContent = () => {
             />
           ))}
         </div>
+        {/* Dog age to human age pill looking components */}
         <AgeInput
           dogSize={dogSize}
           handleAgeInput={handleAgeInput}
