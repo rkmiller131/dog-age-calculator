@@ -3,9 +3,11 @@ import SizeSelectIcon from './SizeSelectIcon';
 import AgeInput from './AgeInput';
 import { sizeIcons, calcData } from '../../data/generalCalc';
 
-const PageContent = () => {
+type DogSize = 'sm' | 'md' | 'lg' | 'xl' | '';
+
+const GeneralCalCard = () => {
   const [activeSvg, setActiveSvg] = useState<number | null>(null);
-  const [dogSize, setDogSize] = useState<string>('');
+  const [dogSize, setDogSize] = useState<DogSize>('');
   const [dogAgeInput, setDogAgeInput] = useState<number | string>('');
   const [convertedAge, setConvertedAge] = useState<number | null>(null);
 
@@ -22,7 +24,7 @@ const PageContent = () => {
     }
   }, [dogSize, dogAgeInput])
 
-  const handleSizeClick = (index: number, calcKey: string) => {
+  const handleSizeClick = (index: number, calcKey: DogSize) => {
     setActiveSvg(index);
     setDogSize(calcKey);
   }
@@ -48,7 +50,7 @@ const PageContent = () => {
             <SizeSelectIcon
               icon={item.icon}
               description={item.description}
-              handleClick={() => handleSizeClick(index, item.calcKey)}
+              handleClick={() => handleSizeClick(index, item.calcKey as DogSize)}
               isActive={activeSvg === index}
               key={item.calcKey}
             />
@@ -67,4 +69,4 @@ const PageContent = () => {
   );
 };
 
-export default PageContent;
+export default GeneralCalCard;

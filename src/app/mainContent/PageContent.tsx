@@ -1,7 +1,7 @@
 'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import Image from 'next/image'
-import { useTheme } from '../../Theme/ThemeProvider';
+import { useTheme } from '../../theme/ThemeProvider';
 import GeneralCalCard from './GeneralCalcCard';
 
 const PageContent = () => {
