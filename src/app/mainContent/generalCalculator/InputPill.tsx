@@ -36,7 +36,7 @@ const InputPill: React.FC<InputPillProps> = ({ handleAgeInput, dogSize, setNoSiz
   }
   return (
     <div className="flex flex-col w-[45%]">
-      <label htmlFor="dogAge" className="self-center mb-[0.5rem]">
+      <label htmlFor="dogAge" className="self-center mb-[0.5rem] md:text-xl">
         Dog Age
       </label>
       <div className="flex border-2 rounded-3xl border-blue justify-between p-[0.5rem] items-center">
@@ -47,7 +47,7 @@ const InputPill: React.FC<InputPillProps> = ({ handleAgeInput, dogSize, setNoSiz
             onChange={handleInput}
             placeholder="#"
             style={{background: 'transparent'}}
-            className="w-full bg-transparent border-none focus:outline-none focus:border-blue-500 text-center text-2xl"/>
+            className="w-full bg-transparent border-none focus:outline-none focus:border-blue-500 text-center text-2xl md:text-3xl"/>
         </div>
         <span className="text-blue border-l border-blue pl-[0.5rem] pr-[0.5rem]">
           Yrs

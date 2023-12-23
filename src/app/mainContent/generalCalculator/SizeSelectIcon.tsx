@@ -52,7 +52,7 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
       onClick={handleClick}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
-      className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? "border-blue text-blue" : "border-yellow"}`}
+      className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? "border-blue text-blue" : "border-yellow"} md:text-xl`}
     >
       <div className={tw}>
         <IconComponent isActive={isActive} isHovered={isHovered}/>

@@ -31,7 +31,7 @@ const AgeInput: React.FC<AgeInputProps> = ({
           setNoSizeSelected={setNoSizeSelected}
           setBadAgeInput={setBadAgeInput}
         />
-        <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end">
+        <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end md:text-5xl">
           =
         </span>
         <OutputPill humanAge={humanAge}/>
