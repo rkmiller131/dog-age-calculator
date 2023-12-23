@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image'
 import { useTheme } from '../../theme/ThemeProvider';
 import GeneralCalCard from './generalCalculator/GeneralCalcCard';
+import LabCalcCard from './labradorCalculator/LabCalcCard';
 
 const PageContent = () => {
   const { labTheme, toggleTheme } = useTheme();
@@ -27,7 +28,7 @@ const PageContent = () => {
       >
         {labTheme ? 'General Calculator' : 'Labrador Logarithm'}
       </button>
-      <GeneralCalCard />
+      {labTheme ? <LabCalcCard /> : <GeneralCalCard />}
     </div>
   );
 };
