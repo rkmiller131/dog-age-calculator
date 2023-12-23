@@ -18,7 +18,7 @@ const InputPill: React.FC<InputPillProps> = ({ handleAgeInput, dogSize, setNoSiz
 
   }, [dogSize])
 
-  const inputConversion = (val: string | number ) => {
+  const inputConversion = (val: string | number) => {
     if (Number(val)) {
       const roundedAge = Math.round(Number(val));
       return roundedAge > 16 ? 'cap' : Math.round(Number(val));

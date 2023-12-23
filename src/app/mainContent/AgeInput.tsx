@@ -7,9 +7,14 @@ type AgeInputProps = {
   handleAgeInput: (input: number | string) => void;
   humanAge: number | null;
   setNoSizeSelected: Dispatch<SetStateAction<boolean>>
+  setConvertedAge: Dispatch<SetStateAction<number | null>>
 }
-const AgeInput: React.FC<AgeInputProps> = ({ dogSize, handleAgeInput, humanAge, setNoSizeSelected }: AgeInputProps) => {
+const AgeInput: React.FC<AgeInputProps> = ({ dogSize, handleAgeInput, humanAge, setNoSizeSelected, setConvertedAge }: AgeInputProps) => {
   const [errorInput, setErrorInput] = useState(false);
+
+  if(errorInput) {
+    setConvertedAge(null);
+  }
 
   return (
     <div className="flex flex-col items-center mt-[1.5rem] mb-[0.5rem] w-[110%]">

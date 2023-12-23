@@ -14,7 +14,7 @@ const PageContent = () => {
 
   useEffect(() => {
     if(dogAgeInput) {
-      const newAge = calcData[dogSize][dogAgeInput]
+      const newAge = calcData[dogSize][dogAgeInput as number]
       setConvertedAge(newAge);
     }
     if(dogSize) {
@@ -29,8 +29,6 @@ const PageContent = () => {
 
   const handleAgeInput = (input: number | string) => {
     setDogAgeInput(input);
-    // const convertedAge = calcData[dogSize][input];
-    // if (convertedAge) setHumanAge(convertedAge);
   }
 
   return (
@@ -54,7 +52,13 @@ const PageContent = () => {
             />
           ))}
         </div>
-        <AgeInput dogSize={dogSize} handleAgeInput={handleAgeInput} humanAge={convertedAge} setNoSizeSelected={setNoSizeSelected}/>
+        <AgeInput
+          dogSize={dogSize}
+          handleAgeInput={handleAgeInput}
+          humanAge={convertedAge}
+          setNoSizeSelected={setNoSizeSelected}
+          setConvertedAge={setConvertedAge}
+        />
       </div>
     </div>
   );
