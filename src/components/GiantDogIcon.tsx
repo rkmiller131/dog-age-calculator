@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from 'react';
+import React, { CSSProperties } from 'react';
 
 type GiantDogIconProps = {
   isActive: boolean;
@@ -27,7 +27,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
       xmlSpace="preserve"
       style={svgStyles}
       >
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M796.227173,381.120178
           C792.234558,388.870422 789.154907,396.605469 786.376221,404.461029
@@ -642,7 +642,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C214.585449,893.855286 211.260849,889.201599 204.952759,886.396973
           C208.238434,890.680786 212.441391,894.027527 215.108444,899.473694
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M460.868042,406.755493
           C478.268311,405.843750 493.873749,400.589478 508.881073,391.940155
@@ -656,7 +656,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C363.435974,388.876984 384.315552,394.530273 405.160614,400.294281
           C423.263489,405.299988 441.581573,407.985931 460.868042,406.755493
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M392.400146,514.549377
           C409.278046,521.590088 426.312103,526.729919 444.276642,527.545959
@@ -669,7 +669,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C358.566650,501.474426 356.367340,500.481049 355.898773,497.313599
           C367.948181,503.010010 379.997559,508.706421 392.400146,514.549377
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M703.916809,454.288879
           C712.365295,476.342407 713.473511,498.021057 704.169861,519.755493
@@ -682,7 +682,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C662.687073,381.502441 662.982422,381.119385 663.412292,380.011566
           C680.602417,403.004730 694.661255,427.085999 703.916809,454.288879
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M237.192047,627.584961
           C233.735443,628.589966 230.584717,628.629883 227.417633,628.601624
@@ -696,7 +696,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C269.317444,568.357544 265.403198,586.737122 257.948151,604.115112
           C253.709518,613.995483 248.738388,623.498657 237.192047,627.584961
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M743.422974,496.647888
           C750.471558,507.871765 756.003479,519.243042 756.401001,532.573608
@@ -708,7 +708,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C707.964661,442.549194 720.982666,467.619995 738.878784,490.241180
           C740.426514,492.197510 741.786804,494.302002 743.422974,496.647888
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M672.416626,565.550537
           C671.925232,577.064636 666.422791,586.379578 661.793945,596.180664
@@ -718,7 +718,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C655.651245,514.323303 665.700745,529.936646 670.571106,548.360291
           C672.025391,553.861694 672.755798,559.432922 672.416626,565.550537
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M201.479156,513.311157
           C193.959106,494.224121 195.962357,475.458252 201.162323,456.690552
@@ -730,7 +730,7 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C216.635223,534.612305 217.852585,536.090271 216.446075,538.363159
           C210.136139,530.739441 205.721497,522.304626 201.479156,513.311157
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M589.256836,582.644409
           C574.899841,562.901123 578.443604,541.050598 580.780823,519.341736
@@ -739,14 +739,14 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C602.785034,599.764038 602.388123,600.021606 601.991272,600.279175
           C597.813721,594.502014 593.636230,588.724792 589.256836,582.644409
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M653.854370,683.706421
           C648.427551,706.725159 645.927795,729.614136 647.941101,754.066833
           C637.029968,736.716431 644.195435,679.814392 659.511353,662.152527
           C657.428772,670.126160 655.706970,676.718384 653.854370,683.706421
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M211.009430,714.972473
           C206.239624,720.555420 203.451508,727.418701 199.255676,733.419373
@@ -757,21 +757,21 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C218.536453,698.180603 214.842102,706.244690 211.059326,714.662903
           C210.970917,715.017090 210.998886,714.989319 211.009430,714.972473
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M745.412842,300.562897
           C749.215637,302.096893 752.653198,303.518585 756.907837,305.278259
           C736.213318,310.022766 711.640503,289.255219 710.354614,266.448853
           C719.713867,280.080322 728.546936,294.260071 745.412842,300.562897
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M583.895325,354.701691
           C582.754517,374.666046 581.765442,394.180115 589.432129,413.853790
           C575.453552,403.223267 573.129639,361.917389 585.148071,342.424591
           C584.763367,346.368286 584.378723,350.311951 583.895325,354.701691
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M781.796448,135.797729
           C785.617676,132.186951 789.889709,130.078232 794.700195,128.729904
@@ -785,14 +785,14 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C777.931030,155.023071 776.775940,159.909225 773.207153,163.661972
           C774.193115,153.912003 774.392883,143.966888 781.796448,135.797729
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M752.343994,216.751984
           C753.535645,234.682465 757.619873,251.563248 763.170837,268.592926
           C744.219727,259.540161 739.347229,199.480042 755.873901,180.157303
           C753.139221,192.067688 751.768372,204.092194 752.343994,216.751984
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M335.816223,635.701599
           C326.235718,644.579773 316.999542,653.467896 305.602417,659.613708
@@ -803,14 +803,14 @@ const GiantDogIcon = ({ isActive, isHovered }: GiantDogIconProps) => {
           C329.408508,637.596558 331.312592,636.244690 333.358856,635.155884
           C334.109711,634.756287 335.327759,633.364807 335.816223,635.701599
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M267.664551,743.753174
           C267.109924,733.004761 270.166992,724.238586 278.894104,717.812378
           C274.168274,727.932800 270.588531,738.385071 269.200287,750.113892
           C266.857849,747.973999 268.014252,745.928833 267.664551,743.753174
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M684.817566,749.105103
           C688.059143,738.970215 691.200989,729.235535 694.580627,718.763855

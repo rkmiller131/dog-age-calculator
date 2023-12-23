@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from 'react';
+import React, { CSSProperties } from 'react';
 
 type LargeDogIconProps = {
   isActive: boolean;
@@ -26,7 +26,7 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
       xmlSpace="preserve"
       style={svgStyles}
       >
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M817.536377,807.581482
           C818.835083,812.816467 820.375488,817.602844 821.133118,822.510132
@@ -309,7 +309,7 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C376.381348,210.096024 366.512939,200.416885 356.686157,190.698212
           C353.936279,187.978561 350.824554,185.766373 346.312042,184.539520
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M382.360779,356.299316
           C387.833191,352.570374 392.649078,348.418274 398.808624,346.393982
@@ -324,7 +324,7 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C367.556274,346.657074 366.604767,356.983490 368.796753,367.133759
           C373.393036,363.463562 377.737061,359.994781 382.360779,356.299316
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M307.242340,370.526794
           C305.179871,371.591858 305.139496,371.589050 305.263458,369.810547
@@ -335,7 +335,7 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C333.150391,321.073578 339.551971,320.015015 346.969391,323.869659
           C325.338776,332.865723 311.615479,347.685272 307.242340,370.526794
         z"/>
-        <path fill={isActive ? hoverColor : (isHovered ? hoverColor : color)} opacity="1.000000" stroke="none"
+        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
           d="
         M296.526489,222.594391
           C293.328064,225.953140 288.955109,225.175476 285.061859,225.882004

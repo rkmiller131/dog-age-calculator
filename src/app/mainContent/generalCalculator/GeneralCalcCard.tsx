@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import SizeSelectIcon from './SizeSelectIcon';
 import AgeInput from './AgeInput';
-import { sizeIcons, calcData } from '../../data/generalCalc';
+import { sizeIcons, calcData } from '../../../data/generalCalc';
 
-const PageContent = () => {
+type DogSize = 'sm' | 'md' | 'lg' | 'xl' | '';
+
+const GeneralCalCard = () => {
   const [activeSvg, setActiveSvg] = useState<number | null>(null);
-  const [dogSize, setDogSize] = useState<string>('');
+  const [dogSize, setDogSize] = useState<DogSize>('');
   const [dogAgeInput, setDogAgeInput] = useState<number | string>('');
   const [convertedAge, setConvertedAge] = useState<number | null>(null);
 
-  // Error message:
+  // Error messages:
   const [noSizeSelected, setNoSizeSelected] = useState<boolean>(false);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const PageContent = () => {
     }
   }, [dogSize, dogAgeInput])
 
-  const handleSizeClick = (index: number, calcKey: string) => {
+  const handleSizeClick = (index: number, calcKey: DogSize) => {
     setActiveSvg(index);
     setDogSize(calcKey);
   }
@@ -41,17 +43,20 @@ const PageContent = () => {
           <span>Size of Dog</span>
           {noSizeSelected && <span className="pl-[0.5rem] text-3xl text-error-red">*</span>}
         </div>
+
+        {/* Icon size selection boxes */}
         <div className="w-[100%] flex flex-wrap justify-evenly mt-[0.5rem]">
           {sizeIcons.map((item, index) => (
             <SizeSelectIcon
               icon={item.icon}
               description={item.description}
-              handleClick={() => handleSizeClick(index, item.calcKey)}
+              handleClick={() => handleSizeClick(index, item.calcKey as DogSize)}
               isActive={activeSvg === index}
               key={item.calcKey}
             />
           ))}
         </div>
+        {/* Dog age to human age pill looking components */}
         <AgeInput
           dogSize={dogSize}
           handleAgeInput={handleAgeInput}
@@ -64,4 +69,4 @@ const PageContent = () => {
   );
 };
 
-export default PageContent;
+export default GeneralCalCard;

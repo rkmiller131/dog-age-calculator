@@ -1,18 +1,18 @@
 import React from 'react';
 import Header from './Header'
-import Test from './mainContent/PageContent'
+import PageContent from './mainContent/PageContent'
 import Footer from './footer/Footer'
 
-// note, set up a division between what home has in it:
-// Navbar
-// cards <- use client and access context there, leaving the rest to ssr
-// Footer
+// set up the following division:
+// Navbar <- ssr component
+// PageContent <- use client and access context in there
+// Footer <- ssr component
 
 const Home = () => {
   return (
     <main>
       <Header />
-      <Test />
+      <PageContent />
       <Footer />
     </main>
   );
