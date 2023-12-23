@@ -1,4 +1,5 @@
 import React, { ChangeEvent, Dispatch, SetStateAction, useState, useEffect } from 'react'
+import { inputConversion } from '../../../data/generalCalc';
 
 type InputPillProps = {
   handleAgeInput: (input: number | string) => void;
@@ -10,15 +11,6 @@ type InputPillProps = {
 // Handles dog age input and updates human age based on valid number entries and a dog size being selected
 const InputPill: React.FC<InputPillProps> = ({ handleAgeInput, dogSize, setNoSizeSelected, setBadAgeInput }) => {
   const [input, setInput] = useState<string>('');
-
-  const inputConversion = (val: string | number): "cap" | number | false => {
-    if (Number(val)) {
-      const roundedAge = Math.round(Number(val));
-      return roundedAge > 16 ? 'cap' : Math.round(Number(val));
-    }
-    // in cases where the user enters text instead of a number
-    return false;
-  }
 
   // If user enters an age before selecting a size, then chooses a size, update age output
   useEffect(() => {
