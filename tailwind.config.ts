@@ -21,7 +21,8 @@ const config: Config = {
       'blue': '#7BDBFF',
       'faded-blue': '#6C8E9A',
       'orange': '#C8652E',
-      'drk-blue': '#231B2A'
+      'drk-blue': '#231B2A',
+      'error-red': 'rgb(225 29 72)',
     },
     backgroundColor: {
       'yellow-btn': '#FCD372',
