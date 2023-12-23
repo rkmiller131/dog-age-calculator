@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '../Theme/ThemeProvider'
+import Header from './Header'
+import Footer from './footer/Footer'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
@@ -11,10 +13,16 @@ type LayoutProps = {
   children: React.ReactNode;
 }
 
+const bodyStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  flexWrap: 'wrap',
+}
+
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body>
+      <body style={bodyStyle}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

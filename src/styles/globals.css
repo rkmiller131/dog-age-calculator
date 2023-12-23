@@ -8,8 +8,19 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  height: 100%;
 }
 
 .text-stroke {
   text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("/park.png");
+  background-size: cover;
+  background-position: center;
 }
