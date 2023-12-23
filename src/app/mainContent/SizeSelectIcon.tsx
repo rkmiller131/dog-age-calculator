@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import SmallDogIcon from '../../components/SmallDogIcon'
-import MediumDogIcon from '../../components/MediumDogIcon'
-import LargeDogIcon from '../../components/LargeDogIcon'
-import GiantDogIcon from '../../components/GiantDogIcon'
+import dynamic from 'next/dynamic'
 
 type SizeSelectionProps = {
   icon: string;
@@ -10,8 +7,10 @@ type SizeSelectionProps = {
   isActive: boolean;
   handleClick: () => void;
 }
+
 const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handleClick, isActive }: SizeSelectionProps) => {
-  // in order to target the child svg to affect fill color, pass down hovered state
+
+  // in order to target the child svg to affect fill color, pass down a manual hovered state (see svg components)
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const handleHover = () => {
@@ -22,25 +21,20 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
     setIsHovered(false);
   };
 
-  let svg;
-  let tw;
-  switch(icon) {
-    case 'smallDog':
-      svg = <SmallDogIcon isActive={isActive} isHovered={isHovered}/>
-      tw = "w-[60%]";
-      break;
-    case 'mediumDog':
-      svg = <MediumDogIcon isActive={isActive} isHovered={isHovered}/>
-      tw = "w-[80%]";
-      break;
-    case 'largeDog':
-      svg = <LargeDogIcon isActive={isActive} isHovered={isHovered}/>
-      tw = "w-[100%]";
-      break;
-    default:
-      svg = <GiantDogIcon isActive={isActive} isHovered={isHovered}/>
-      tw = "w-[100%]";
-  }
+  const DogIconComponent = dynamic(() =>
+    import(`../../components/${icon.charAt(0).toUpperCase()}Icon`)) as React.FC<{ isActive: boolean; isHovered: boolean }>;
+
+  // size of the icon inside its selection box
+  const tw = (() => {
+    switch(icon) {
+      case 'smallDog':
+        return "w-[60%]";
+      case 'mediumDog':
+        return "w-[80%]";
+      default:
+        return "w-[100%]";
+    }
+  })();
 
   return (
     <div
@@ -50,7 +44,7 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
       className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? "border-blue text-blue" : "border-yellow"}`}
     >
       <div className={tw}>
-        {svg}
+        <DogIconComponent isActive={isActive} isHovered={isHovered}/>
       </div>
       <span>{description}</span>
     </div>
