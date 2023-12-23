@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SizeSelectIcon from './SizeSelectIcon';
 import AgeInput from './AgeInput';
-import { sizeIcons, calcData } from '../../data/generalCalc';
+import { sizeIcons, calcData } from '../../../data/generalCalc';
 
 type DogSize = 'sm' | 'md' | 'lg' | 'xl' | '';
 

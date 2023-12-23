@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import SmallDogIcon from '../../components/SmallDogIcon'
-import MediumDogIcon from '../../components/MediumDogIcon'
-import LargeDogIcon from '../../components/LargeDogIcon'
-import GiantDogIcon from '../../components/GiantDogIcon'
+import SmallDogIcon from '../../../components/SmallDogIcon'
+import MediumDogIcon from '../../../components/MediumDogIcon'
+import LargeDogIcon from '../../../components/LargeDogIcon'
+import GiantDogIcon from '../../../components/GiantDogIcon'
 
 type SizeSelectionProps = {
   icon: string;

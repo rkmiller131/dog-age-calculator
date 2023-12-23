@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image'
 import { useTheme } from '../../theme/ThemeProvider';
-import GeneralCalCard from './GeneralCalcCard';
+import GeneralCalCard from './generalCalculator/GeneralCalcCard';
 
 const PageContent = () => {
   const { labTheme, toggleTheme } = useTheme();
