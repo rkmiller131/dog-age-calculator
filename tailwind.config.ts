@@ -14,7 +14,9 @@ const config: Config = {
       md: '400px',
       lg: '768px',
       xl: '1024px',
-      '2xl': '1536px',
+      '2xl': '1280px',
+      '3xl': '1536px',
+      '4xl': '1700px',
     },
     colors: {
       'yellow': '#FBCA6B',

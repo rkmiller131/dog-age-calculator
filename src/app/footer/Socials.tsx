@@ -11,7 +11,7 @@ const Socials: React.FC = () => (
       alt="LinkedIn Social Link"
     />
     <LinkIcon
-      href="https://github.com/rkmiller131"
+      href="https://github.com/rkmiller131/dog-age-calculator"
       src="/gitHub.png"
       alt="GitHub Social Link"
     />

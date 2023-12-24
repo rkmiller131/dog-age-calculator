@@ -18,8 +18,8 @@ const LinkIcon: React.FC<LinkIconProps> = ({ href, src, alt }) =>
   // )
   (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <div className="relative flex items-center justify-center rounded m-[0.5rem] md:m-[0.75rem] h-[34px] w-[34px] hover:bg-bubble active:bg-bubble">
-        <div className="relative h-[28px] w-[28px] sm:h-[34px] sm:w-[34px]">
+      <div className="relative flex items-center justify-center rounded m-[0.5rem] md:m-[0.75rem] h-[34px] w-[34px] hover:bg-bubble active:bg-bubble 4xl:h-[48px] 4xl:w-[48px]">
+        <div className="relative h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] 4xl:h-[42px] 4xl:w-[42px]">
           <Image
             src={src}
             alt={alt}

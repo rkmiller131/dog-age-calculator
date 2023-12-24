@@ -36,12 +36,12 @@ function GeneralCalCard() {
 
   return (
     <div className="flex flex-col w-[90%] align-center bg-card-black rounded-3xl mt-[2rem] text-yellow font-primary overflow-hidden shadow-drop lg:w-[50%] xl:mt-0">
-      <h2 className="bg-yellow-gradient p-[0.5rem] pt-[1rem] text-xl/8 pr-[2.25rem] pl-[2.25rem] text-center md:text-2xl xl:text-3xl xl:pr-[3.5rem] xl:pl-[3.5rem]">
+      <h2 className="bg-yellow-gradient p-[0.5rem] pt-[1rem] text-xl/8 pr-[2.25rem] pl-[2.25rem] text-center md:text-2xl xl:text-3xl xl:pr-[3.5rem] xl:pl-[3.5rem] 3xl:pl-[9rem] 3xl:pr-[9rem] 3xl:text-4xl 4xl:text-[2rem] 4xl:leading-[2rem] 4xl:pl-[15rem] 4xl:pr-[15rem]">
         Calculate dog years to human years
       </h2>
-      <div className="flex flex-col items-center p-[1rem] sm:pl-[1.75rem] sm:pr-[1.75rem] xl:h-[100%] xl:justify-evenly">
+      <div className="flex flex-col items-center p-[1rem] sm:pl-[1.75rem] sm:pr-[1.75rem] xl:h-[100%] xl:justify-evenly 4xl:pl-[3rem] 4xl:pr-[3rem]">
         <div className="flex self-start items-center">
-          <span className="md:text-xl">
+          <span className="md:text-xl 3xl:text-2xl">
             Size of Dog
           </span>
           {!dogSize && !initialPageLoad && <span className="pl-[0.5rem] text-3xl text-error-red">*</span>}
@@ -60,7 +60,7 @@ function GeneralCalCard() {
           ))}
         </div>
         {/* Age input and output pill-looking components */}
-        <div className="flex flex-col items-center mt-[1.5rem] mb-[0.5rem] w-[110%]">
+        <div className="flex flex-col items-center mt-[1.5rem] mb-[0.5rem] w-[110%] 3xl:mb-[2rem] 3xl:w-[100%] 4xl:w-[95%]">
           <div className="flex justify-evenly items-center xl:w-[70%]">
             <InputPill handleAgeInput={handleAgeInput} />
             <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end md:text-5xl mb-[3%]">
