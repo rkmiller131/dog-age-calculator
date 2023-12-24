@@ -20,7 +20,7 @@ const bodyStyle: React.CSSProperties = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body style={bodyStyle}>
+      <body id="root" style={bodyStyle}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

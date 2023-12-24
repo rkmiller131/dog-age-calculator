@@ -24,3 +24,12 @@ main {
   background-size: cover;
   background-position: center;
 }
+
+@media screen and (min-width: 1024px) {
+  main {
+    height: 100vh;
+  }
+  #root > main > div > h1 {
+    text-shadow: -0.75px -0.75px 0 #000, 0.75px -0.75px 0 #000, -0.75px 0.75px 0 #000, 0.75px 0.75px 0 #000;
+  }
+}

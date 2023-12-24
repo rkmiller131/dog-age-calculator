@@ -13,7 +13,7 @@ const config: Config = {
       sm: '330px',
       md: '400px',
       lg: '768px',
-      xl: '1440px',
+      xl: '1024px',
       '2xl': '1536px',
     },
     colors: {
@@ -38,7 +38,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle, #FDF6CB, #FFD648)',
         'yellow-gradient': 'linear-gradient(rgba(248, 212, 141, 0.4), transparent)',
-        'gradient': 'linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent)',
+        'gradient': 'linear-gradient(to top, rgba(0, 0, 0, 1), transparent)',
         'main-bg': 'url("/park.png")',
         'dogs': 'url("/dogs.png")',
         'labs': 'url("/labs.png")',

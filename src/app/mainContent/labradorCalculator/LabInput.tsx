@@ -26,7 +26,7 @@ const LabInput: React.FC<LabInputProps> = ({ setHumanAge, setBadAgeInput }) => {
   };
 
   return (
-    <div className="flex flex-col w-[45%] mt-[1rem] text-orange">
+    <div className="flex flex-col w-[45%] mt-[1rem] text-orange xl:mt-0 xl:w-[30%]">
       <label htmlFor="dogAge" className="self-center mb-[0.5rem] text-drk-blue md:text-2xl">
         Dog Age
       </label>

@@ -35,11 +35,11 @@ function GeneralCalCard() {
   }, [dogAgeInput, dogSize]);
 
   return (
-    <div className="flex flex-col w-[90%] align-center bg-card-black rounded-3xl mt-[2rem] text-yellow font-primary overflow-hidden shadow-drop lg:w-[50%]">
-      <h2 className="bg-yellow-gradient p-[0.5rem] pt-[1rem] text-xl/8 pr-[2.25rem] pl-[2.25rem] text-center md:text-2xl">
+    <div className="flex flex-col w-[90%] align-center bg-card-black rounded-3xl mt-[2rem] text-yellow font-primary overflow-hidden shadow-drop lg:w-[50%] xl:mt-0">
+      <h2 className="bg-yellow-gradient p-[0.5rem] pt-[1rem] text-xl/8 pr-[2.25rem] pl-[2.25rem] text-center md:text-2xl xl:text-3xl xl:pr-[3.5rem] xl:pl-[3.5rem]">
         Calculate dog years to human years
       </h2>
-      <div className="flex flex-col items-center p-[1rem] sm:pl-[1.75rem] sm:pr-[1.75rem]">
+      <div className="flex flex-col items-center p-[1rem] sm:pl-[1.75rem] sm:pr-[1.75rem] xl:h-[100%] xl:justify-evenly">
         <div className="flex self-start items-center">
           <span className="md:text-xl">
             Size of Dog
@@ -61,15 +61,15 @@ function GeneralCalCard() {
         </div>
         {/* Age input and output pill-looking components */}
         <div className="flex flex-col items-center mt-[1.5rem] mb-[0.5rem] w-[110%]">
-          <div className="flex justify-evenly items-center">
+          <div className="flex justify-evenly items-center xl:w-[70%]">
             <InputPill handleAgeInput={handleAgeInput} />
-            <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end md:text-5xl">
+            <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end md:text-5xl mb-[3%]">
               =
             </span>
             <OutputPill convertedAge={convertedAge} />
           </div>
           {!dogAgeInput && !initialPageLoad && (
-          <span className="text-error-red self-start mt-[0.5rem]">
+          <span className="text-error-red self-start mt-[0.5rem] xl:self-center">
             * Please enter a number
           </span>
           )}
