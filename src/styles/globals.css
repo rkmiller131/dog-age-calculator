@@ -24,3 +24,43 @@ main {
   background-size: cover;
   background-position: center;
 }
+
+@media screen and (min-width: 1024px) {
+  main {
+    height: 100vh;
+  }
+  #root > main > div > h1 {
+    text-shadow: -0.75px -0.75px 0 #000, 0.75px -0.75px 0 #000, -0.75px 0.75px 0 #000, 0.75px 0.75px 0 #000;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 1024px) {
+  #root > main > div > h1 {
+    padding-top: 3rem;
+  }
+  #root > main > div:nth-child(1) > div {
+    width: 18rem;
+    height: 18rem;
+  }
+  #root > main > div:nth-child(2) {
+    margin-top: -10rem;
+  }
+  #root > main > div:nth-child(2) > div > div{
+    height: 500px;
+    width: 500px;
+  }
+  #root > main > div:nth-child(2) > div:nth-child(2) > h2{
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+  #root > main > div:nth-child(2) > div:nth-child(2) > div {
+    width: 100%;
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  #root > main > div > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+} */

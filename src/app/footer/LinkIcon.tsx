@@ -1,36 +1,34 @@
-import React from 'react'
-import classnames from 'classnames'
-import Image from 'next/image'
+import React from 'react';
+import classnames from 'classnames';
+import Image from 'next/image';
 
 type LinkIconProps = {
   href: string;
   src: string;
-  width: number;
-  height: number;
   alt: string;
 }
 
-const LinkIcon: React.FC<LinkIconProps> = ({ href, src, width, height, alt }) => {
+const LinkIcon: React.FC<LinkIconProps> = ({ href, src, alt }) =>
   // dynamic class names with a default, and dynamic width + 6 that will be incorporated if width is truthy
-  const sizeClasses = classnames(
-    'w-[34px] h-[34px]', {
-      [`w-${width + 6}`]: width,
-      [`h-${height + 6}`]: height,
-    }
-  )
-  return (
+  // const sizeClasses = classnames(
+  //   'w-[34px] h-[34px]', {
+  //     [`w-${width + 6}`]: width,
+  //     [`h-${height + 6}`]: height,
+  //   }
+  // )
+  (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <div className={`relative flex items-center justify-center rounded m-[0.5rem] ${sizeClasses} hover:bg-bubble active:bg-bubble`}>
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className="absolute z-10"
-        />
+      <div className="relative flex items-center justify-center rounded m-[0.5rem] md:m-[0.75rem] h-[34px] w-[34px] hover:bg-bubble active:bg-bubble 4xl:h-[48px] 4xl:w-[48px]">
+        <div className="relative h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] 4xl:h-[42px] 4xl:w-[42px]">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="absolute z-10"
+          />
+        </div>
       </div>
     </a>
   );
-}
 
 export default LinkIcon;

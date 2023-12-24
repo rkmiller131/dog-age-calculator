@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import SmallDogIcon from '../../../components/SmallDogIcon'
-import MediumDogIcon from '../../../components/MediumDogIcon'
-import LargeDogIcon from '../../../components/LargeDogIcon'
-import GiantDogIcon from '../../../components/GiantDogIcon'
+import React, { useState } from 'react';
+import SmallDogIcon from '../../../components/SmallDogIcon';
+import MediumDogIcon from '../../../components/MediumDogIcon';
+import LargeDogIcon from '../../../components/LargeDogIcon';
+import GiantDogIcon from '../../../components/GiantDogIcon';
 
 type SizeSelectionProps = {
   icon: string;
@@ -11,8 +11,9 @@ type SizeSelectionProps = {
   handleClick: () => void;
 }
 
-const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handleClick, isActive }: SizeSelectionProps) => {
-
+const SizeSelectIcon: React.FC<SizeSelectionProps> = ({
+  icon, description, handleClick, isActive,
+}: SizeSelectionProps) => {
   // in order to target the child svg to affect fill color, pass down a manual hovered state (see svg components)
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
@@ -27,22 +28,23 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
   // size of the icon inside its selection box
   let IconComponent;
   let tw;
-  switch(icon) {
+
+  switch (icon) {
     case 'smallDog':
-      IconComponent = SmallDogIcon
-      tw = "w-[60%]";
+      IconComponent = SmallDogIcon;
+      tw = 'w-[60%]';
       break;
     case 'mediumDog':
-      IconComponent = MediumDogIcon
-      tw = "w-[80%]";
+      IconComponent = MediumDogIcon;
+      tw = 'w-[80%]';
       break;
     case 'largeDog':
-      IconComponent = LargeDogIcon
-      tw = "w-[100%]";
+      IconComponent = LargeDogIcon;
+      tw = 'w-[100%]';
       break;
     default:
-      IconComponent = GiantDogIcon
-      tw = "w-[100%]";
+      IconComponent = GiantDogIcon;
+      tw = 'w-[100%]';
   }
 
   return (
@@ -52,14 +54,14 @@ const SizeSelectIcon: React.FC<SizeSelectionProps> = ({ icon, description, handl
       onClick={handleClick}
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
-      className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? "border-blue text-blue" : "border-yellow"}`}
+      className={`flex flex-col items-center w-[40%] border-2 p-[0.5rem] rounded-lg m-[0.5rem] hover:border-blue hover:text-blue hover:cursor-pointer justify-end ${isActive ? 'border-blue text-blue' : 'border-yellow'} md:text-xl xl:w-[20%] xl:text-sm 3xl:text-xl 3xl:w-[22%] 4xl:text-3xl`}
     >
       <div className={tw}>
-        <IconComponent isActive={isActive} isHovered={isHovered}/>
+        <IconComponent isActive={isActive} isHovered={isHovered} />
       </div>
       <span aria-label={description} role="img">{description}</span>
     </div>
-  )
-}
+  );
+};
 
 export default SizeSelectIcon;

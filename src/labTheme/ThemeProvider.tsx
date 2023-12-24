@@ -1,5 +1,8 @@
 'use client';
-import { createContext, useContext, useState, ReactNode } from 'react';
+
+import {
+  createContext, useContext, useState, ReactNode,
+} from 'react';
 
 type ThemeContextType = {
   labTheme: boolean;
@@ -16,17 +19,17 @@ type ThemeProviderProps = {
   children: ReactNode;
 }
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [labTheme, setTheme] =  useState<boolean>(false);
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [labTheme, setTheme] = useState<boolean>(false);
 
   const toggleTheme = (): void => {
     setTheme((prev) => !prev);
-  }
+  };
 
   const contextValue: ThemeContextType = {
     labTheme,
-    toggleTheme
-  }
+    toggleTheme,
+  };
 
   return (
     <ThemeContext.Provider value={contextValue}>
