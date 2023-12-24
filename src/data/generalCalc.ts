@@ -10,7 +10,7 @@ type CalcData = {
 export const sizeIcons = [
   {
     icon: 'smallDog',
-    description: '> 20lbs',
+    description: '< 20lbs',
     calcKey: 'sm',
   },
   {
@@ -25,7 +25,7 @@ export const sizeIcons = [
   },
   {
     icon: 'giantDog',
-    description: '< 100lbs',
+    description: '> 100lbs',
     calcKey: 'xl',
   },
 ];
