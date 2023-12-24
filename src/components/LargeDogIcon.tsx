@@ -4,10 +4,9 @@ type LargeDogIconProps = {
   isActive: boolean;
   isHovered: boolean;
 }
-const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
-
-  const color = "#FBCA6B";
-  const hoverColor = "#7BDBFF";
+function LargeDogIcon({ isActive, isHovered }: LargeDogIconProps) {
+  const color = '#FBCA6B';
+  const hoverColor = '#7BDBFF';
 
   const svgStyles: CSSProperties = {
     width: '100%',
@@ -20,14 +19,18 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      x="0px" y="0px"
+      x="0px"
+      y="0px"
       viewBox="0 0 1024 1024"
       enableBackground="new 0 0 1024 1024"
       xmlSpace="preserve"
       style={svgStyles}
-      >
-        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
-          d="
+    >
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
+        d="
         M817.536377,807.581482
           C818.835083,812.816467 820.375488,817.602844 821.133118,822.510132
           C822.056824,828.493347 820.211792,830.322083 814.267517,830.329285
@@ -308,9 +311,13 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C391.388245,228.372849 391.710297,225.714951 386.061554,219.959351
           C376.381348,210.096024 366.512939,200.416885 356.686157,190.698212
           C353.936279,187.978561 350.824554,185.766373 346.312042,184.539520
-        z"/>
-        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
-          d="
+        z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
+        d="
         M382.360779,356.299316
           C387.833191,352.570374 392.649078,348.418274 398.808624,346.393982
           C400.078064,348.761078 398.301483,350.021393 397.443604,351.470703
@@ -323,9 +330,13 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C359.417206,340.066315 359.724152,339.460938 360.122375,337.840607
           C367.556274,346.657074 366.604767,356.983490 368.796753,367.133759
           C373.393036,363.463562 377.737061,359.994781 382.360779,356.299316
-        z"/>
-        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
-          d="
+        z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
+        d="
         M307.242340,370.526794
           C305.179871,371.591858 305.139496,371.589050 305.263458,369.810547
           C305.980072,359.529633 307.537354,349.383179 309.683228,339.294769
@@ -334,18 +345,23 @@ const LargeDogIcon = ({ isActive, isHovered }: LargeDogIconProps) => {
           C347.175385,288.407135 334.946045,303.866364 325.899231,322.048889
           C333.150391,321.073578 339.551971,320.015015 346.969391,323.869659
           C325.338776,332.865723 311.615479,347.685272 307.242340,370.526794
-        z"/>
-        <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
-          d="
+        z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
+        d="
         M296.526489,222.594391
           C293.328064,225.953140 288.955109,225.175476 285.061859,225.882004
           C276.172119,227.495285 267.266235,227.945816 258.491669,222.509613
           C262.969574,217.499542 264.047546,211.154999 266.751099,205.546005
           C270.578278,197.605759 278.160828,197.186920 282.975830,204.536880
           C287.048157,210.753159 289.765594,217.975540 296.526489,222.594391
-        z"/>
+        z"
+      />
     </svg>
   );
-};
+}
 
 export default LargeDogIcon;

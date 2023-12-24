@@ -1,11 +1,11 @@
-'use client'
+'use client';
 import React from 'react';
-import Image from 'next/image'
-import { useTheme } from '../../theme/ThemeProvider';
-import GeneralCalCard from './generalCalculator/GeneralCalcCard';
+import Image from 'next/image';
+import { useTheme } from '../../labTheme/ThemeProvider';
+import GeneralCalcCard from './generalCalculator/GeneralCalcCard';
 import LabCalcCard from './labradorCalculator/LabCalcCard';
 
-const PageContent = () => {
+function PageContent() {
   const { labTheme, toggleTheme } = useTheme();
 
   return (
@@ -13,7 +13,7 @@ const PageContent = () => {
       {/* Adjust the size of the image here for different breakpoints */}
       <div className="relative w-[225px] h-[225px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px]">
         <Image
-          src={labTheme ? "/labs.png" : "/dogs.png"}
+          src={labTheme ? '/labs.png' : '/dogs.png'}
           alt="Smiling dogs"
           fill
           className="rounded-3xl shadow-drop"
@@ -25,9 +25,9 @@ const PageContent = () => {
       >
         {labTheme ? 'General Calculator' : 'Labrador Logarithm'}
       </button>
-      {labTheme ? <LabCalcCard /> : <GeneralCalCard />}
+      {labTheme ? <LabCalcCard /> : <GeneralCalcCard />}
     </div>
   );
-};
+}
 
 export default PageContent;

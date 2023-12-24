@@ -1,27 +1,26 @@
-'use client'
-import React from 'react'
-import LinkIcon from './LinkIcon'
+'use client';
 
-const Socials: React.FC = () => {
-  return (
-    <div className="flex space-between">
-      <LinkIcon
-        href={"https://www.linkedin.com/in/rachel-miller-mlr/"}
-        src={"/linkedIn.png"}
-        alt={"LinkedIn Social Link"}
-      />
-      <LinkIcon
-        href={"https://github.com/rkmiller131"}
-        src={"/gitHub.png"}
-        alt={"GitHub Social Link"}
-      />
-      <LinkIcon
-        href={"https://webdevrachel.com/"}
-        src={"/portfolio.png"}
-        alt={"Link to developer portfolio"}
-      />
-    </div>
-  );
-}
+import React from 'react';
+import LinkIcon from './LinkIcon';
+
+const Socials: React.FC = () => (
+  <div className="flex space-between">
+    <LinkIcon
+      href="https://www.linkedin.com/in/rachel-miller-mlr/"
+      src="/linkedIn.png"
+      alt="LinkedIn Social Link"
+    />
+    <LinkIcon
+      href="https://github.com/rkmiller131"
+      src="/gitHub.png"
+      alt="GitHub Social Link"
+    />
+    <LinkIcon
+      href="https://webdevrachel.com/"
+      src="/portfolio.png"
+      alt="Link to developer portfolio"
+    />
+  </div>
+);
 
 export default Socials;

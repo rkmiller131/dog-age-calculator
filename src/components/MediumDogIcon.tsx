@@ -4,10 +4,9 @@ type MediumDogIconProps = {
   isActive: boolean;
   isHovered: boolean;
 }
-const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
-
-  const color = "#FBCA6B";
-  const hoverColor = "#7BDBFF";
+function MediumDogIcon({ isActive, isHovered }: MediumDogIconProps) {
+  const color = '#FBCA6B';
+  const hoverColor = '#7BDBFF';
 
   const svgStyles: CSSProperties = {
     width: '100%',
@@ -20,13 +19,17 @@ const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      x="0px" y="0px"
+      x="0px"
+      y="0px"
       viewBox="0 0 1024 1024"
       enableBackground="new 0 0 1024 1024"
       xmlSpace="preserve"
       style={svgStyles}
-      >
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+    >
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M473.293396,659.940002
         C463.904388,659.012939 454.985840,658.119507 445.440796,657.163330
@@ -291,8 +294,12 @@ const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
         C216.430695,193.387817 217.556137,194.863464 218.314468,196.372147
         C220.555801,200.831223 222.632401,205.372833 224.847717,209.845352
         C225.848267,211.865326 226.083374,214.425156 229.230942,215.386856
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M354.822083,395.877502
         C328.664948,413.121918 303.839050,431.483276 281.593750,453.149628
@@ -307,8 +314,12 @@ const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
         C388.274048,311.574066 390.203217,317.405914 391.309937,323.487823
         C395.830353,348.329285 386.406281,368.115173 368.733337,384.731445
         C364.504547,388.707367 359.667603,392.036499 354.822083,395.877502
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M291.234619,505.357697
         C305.647858,475.161285 329.469269,454.999695 357.867432,439.530426
@@ -319,8 +330,12 @@ const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
         C321.493073,492.712524 307.923431,504.258118 294.238647,515.665527
         C292.261139,517.313965 290.554504,519.584045 287.119141,519.755310
         C286.721436,514.486206 289.391815,510.215881 291.234619,505.357697
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M280.658691,290.222351
         C284.593933,292.442749 288.323975,294.297302 291.807709,296.535187
@@ -330,9 +345,10 @@ const MediumDogIcon = ({ isActive, isHovered }: MediumDogIconProps) => {
         C250.149063,304.753113 250.529327,294.048798 253.646454,289.268555
         C256.339874,285.138092 262.915100,283.396423 269.495544,285.126953
         C273.380432,286.148590 276.944244,287.915161 280.658691,290.222351
-      z"/>
+      z"
+      />
     </svg>
   );
-};
+}
 
 export default MediumDogIcon;

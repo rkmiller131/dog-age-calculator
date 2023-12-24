@@ -1,5 +1,5 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
-import InputPill from './InputPill'
+import React, { Dispatch, SetStateAction, useState } from 'react';
+import InputPill from './InputPill';
 import OutputPill from './OutputPill';
 
 type AgeInputProps = {
@@ -14,11 +14,11 @@ const AgeInput: React.FC<AgeInputProps> = ({
   handleAgeInput,
   humanAge,
   setNoSizeSelected,
-  setConvertedAge
+  setConvertedAge,
 }: AgeInputProps) => {
   const [badAgeInput, setBadAgeInput] = useState(false);
 
-  if(badAgeInput) {
+  if (badAgeInput) {
     setConvertedAge(null);
   }
 
@@ -34,13 +34,15 @@ const AgeInput: React.FC<AgeInputProps> = ({
         <span className="text-4xl text-blue mr-[0.5rem] ml-[0.5rem] self-end md:text-5xl">
           =
         </span>
-        <OutputPill humanAge={humanAge}/>
+        <OutputPill humanAge={humanAge} />
       </div>
-      {badAgeInput && <span className="text-error-red self-start mt-[0.5rem]">
+      {badAgeInput && (
+      <span className="text-error-red self-start mt-[0.5rem]">
         * Please enter a number
-      </span>}
+      </span>
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default AgeInput;

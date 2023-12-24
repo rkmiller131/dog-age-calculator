@@ -4,10 +4,9 @@ type SmallDogIconProps = {
   isActive: boolean;
   isHovered: boolean;
 }
-const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
-
-  const color = "#FBCA6B";
-  const hoverColor = "#7BDBFF";
+function SmallDogIcon({ isActive, isHovered }: SmallDogIconProps) {
+  const color = '#FBCA6B';
+  const hoverColor = '#7BDBFF';
 
   const svgStyles: CSSProperties = {
     width: '100%',
@@ -20,13 +19,17 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      x="0px" y="0px"
+      x="0px"
+      y="0px"
       viewBox="0 0 1024 1024"
       enableBackground="new 0 0 1024 1024"
       xmlSpace="preserve"
       style={svgStyles}
-      >
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+    >
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M462.984650,731.952576
         C467.823059,743.910339 471.639313,756.520630 483.679138,764.089539
@@ -311,8 +314,12 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C249.419785,210.013840 248.945557,213.640793 251.766693,215.248230
         C257.096405,213.005753 262.673187,210.659348 269.079590,207.963882
         C255.743210,195.797363 242.614960,184.966232 226.446991,176.936493
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M806.828735,785.281006
         C813.435303,795.781799 816.888489,806.643982 814.401306,818.805054
@@ -407,8 +414,12 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C712.536438,781.391357 711.717285,770.687927 708.450562,760.191895
         C709.221924,768.044739 710.156494,775.883667 707.373901,783.666138
         C707.355347,773.769104 703.953674,764.849182 699.760803,755.817627
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M902.775024,498.530151
         C901.508301,500.928192 900.463379,503.012939 899.275757,505.012909
@@ -461,8 +472,12 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C921.857239,444.083160 920.895691,451.486176 916.059265,458.900970
         C911.013306,451.184174 909.982178,442.786072 906.203308,435.420349
         C909.496399,456.674744 910.175476,477.640594 902.775024,498.530151
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M348.294586,227.375458
         C357.485443,229.881287 364.252197,234.959869 368.538696,243.014557
@@ -474,8 +489,12 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C348.573608,240.268509 337.217316,235.954315 328.303131,235.396820
         C319.938202,234.873688 311.582611,235.203995 303.241333,236.628525
         C317.037354,227.942337 331.475128,222.751083 348.294586,227.375458
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M303.698547,322.127563
         C301.096771,320.398956 299.070007,318.354736 296.282288,317.609741
@@ -485,15 +504,23 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C258.236755,302.833557 263.786469,299.265930 270.871613,297.699860
         C283.362274,294.938965 299.945282,303.672058 305.977356,319.819183
         C306.551819,321.356934 307.210846,323.545593 303.698547,322.127563
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M349.229858,550.988281
         C339.835266,576.256165 317.959442,596.820068 297.334747,606.896790
         C331.815094,570.081238 350.576538,527.449463 346.766388,476.275696
         C354.680817,500.828369 357.850342,525.495422 349.229858,550.988281
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M288.826050,578.883423
         C295.506226,570.340698 302.006256,562.110596 308.445099,553.833008
@@ -506,8 +533,12 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C278.125732,654.995972 277.622742,652.624512 276.792023,650.702698
         C269.729797,634.364441 270.914917,617.952942 276.732361,601.608887
         C279.592377,593.573730 283.588593,586.087158 288.826050,578.883423
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M384.549622,297.497559
         C373.424072,290.861267 361.289459,287.297272 349.043304,282.020142
@@ -519,15 +550,23 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C397.903564,288.118805 403.801788,297.993469 409.573975,307.936401
         C410.752228,309.965973 411.605743,312.416809 410.825195,315.991882
         C402.071014,309.213135 394.206055,302.346985 384.549622,297.497559
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M341.754761,585.493774
         C340.730194,586.036194 339.992676,586.483948 338.224609,584.909485
         C367.218597,547.821838 383.471832,506.559875 374.582062,458.204346
         C388.756744,502.212433 389.808380,548.536011 341.754761,585.493774
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M463.012878,731.999146
         C450.850098,699.076965 441.080261,665.019836 418.291779,637.031860
@@ -535,15 +574,23 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C473.000946,749.894104 472.969116,749.912109 468.834991,742.605774
         C466.951202,739.276428 465.221283,735.860046 463.203125,732.217896
         C462.984650,731.952576 463.000488,731.985901 463.012878,731.999146
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M446.940979,639.069214
         C467.271729,662.726074 473.360901,690.652039 473.693787,720.492493
         C465.215759,680.173706 450.448486,643.282898 417.868805,615.690918
         C429.292053,621.264343 438.284637,629.673157 446.940979,639.069214
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M377.817566,228.048889
         C374.305084,217.582718 370.850342,207.520447 365.832886,198.086929
@@ -553,45 +600,69 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C386.002014,219.162613 386.841339,234.213898 385.781281,249.461472
         C385.751892,249.883438 385.321533,250.277527 384.532867,251.596710
         C382.188538,243.375565 380.057953,235.904037 377.817566,228.048889
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M453.658752,497.001007
         C453.479950,476.468750 449.396393,457.114777 442.208435,437.062408
         C462.980621,457.553436 464.708954,528.343506 445.428619,546.309448
         C450.058136,530.333008 453.911133,514.233826 453.658752,497.001007
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M251.331039,572.117432
         C250.555542,591.027161 255.050247,608.739075 259.068726,626.875916
         C253.996567,623.171265 246.471344,599.395020 245.687576,586.009521
         C244.374252,563.580200 248.500702,542.613159 262.115967,524.116943
         C255.893753,539.373901 251.939575,555.128357 251.331039,572.117432
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M404.442383,417.722687
         C408.202240,427.026520 409.914856,434.858093 409.253967,442.046906
         C399.332764,406.530457 376.203857,383.744568 341.880707,371.748596
         C360.526581,372.564087 393.495148,388.807007 404.442383,417.722687
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M458.559570,457.342712
         C456.249115,449.879608 453.915497,442.845459 450.158844,435.045074
         C457.354553,440.230011 469.252838,471.394623 470.295074,485.550446
         C471.906219,507.433014 468.597321,525.176147 460.916931,532.862915
         C467.228790,507.102356 466.335785,482.280273 458.559570,457.342712
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M385.861572,541.715759
         C383.719391,546.023315 381.691559,549.958496 378.227570,553.299011
         C389.717773,522.027100 393.765045,490.171631 387.687927,457.335846
         C397.452759,485.556000 398.818085,513.598083 385.861572,541.715759
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M399.492279,530.392212
         C406.125885,507.847076 407.288208,485.334503 404.018341,462.496857
@@ -599,36 +670,56 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C398.679962,437.359894 398.601501,436.585022 399.249542,435.849243
         C414.249817,457.320770 414.101807,518.354858 398.887115,535.421753
         C397.939178,533.628418 398.976929,532.212769 399.492279,530.392212
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M390.418304,443.471985
         C384.095184,421.586426 372.714355,403.520752 353.475891,389.580475
         C375.913849,391.795746 400.605042,437.560760 395.458618,465.576111
         C393.750580,458.352997 392.731384,450.962921 390.418304,443.471985
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M267.968597,606.223694
         C267.806091,615.120911 269.490906,623.421631 270.232239,632.390076
         C258.127106,620.800598 260.357483,564.713074 273.761139,549.816772
         C268.860901,568.916626 266.175140,587.133911 267.968597,606.223694
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M624.305542,527.677185
         C620.217712,523.825195 616.372070,520.230591 612.526489,516.635986
         C629.950378,518.013550 658.825684,560.837036 657.016602,582.214111
         C649.631714,561.055847 639.120789,543.241150 624.305542,527.677185
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M661.001221,545.940002
         C650.448486,529.511841 637.113708,515.962830 622.242249,502.245178
         C640.547791,506.941437 670.534424,544.220459 670.640991,562.005005
         C667.229675,556.310303 664.214172,551.276489 661.001221,545.940002
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M762.440125,439.832184
         C759.433533,443.206696 755.052307,442.565369 751.197693,442.991089
@@ -636,147 +727,224 @@ const SmallDogIcon = ({ isActive, isHovered }: SmallDogIconProps) => {
         C684.872131,427.108917 683.464172,426.721222 683.080933,425.236206
         C683.654297,424.112946 684.517090,424.631012 685.176514,424.936646
         C709.627380,436.269196 735.234497,441.515747 762.440125,439.832184
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M753.069580,454.768677
         C766.314209,455.148590 779.060425,455.378937 792.296082,451.835022
         C781.677368,463.372040 727.143860,461.273651 713.025085,448.776978
         C726.731873,451.859070 739.484314,454.583618 753.069580,454.768677
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M440.314392,482.981750
         C443.676270,502.059509 443.419708,520.493774 437.025513,538.581421
         C438.527618,524.463074 438.188293,510.308899 437.539337,496.208069
         C436.886353,482.019653 434.001068,468.079010 430.921906,454.161682
         C435.693054,463.118713 438.242401,472.750183 440.314392,482.981750
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M424.320801,756.408325
         C425.997925,770.054688 426.615326,783.301819 424.296478,796.528809
         C423.016235,803.831360 421.212585,810.995728 417.731476,817.722473
         C420.039062,796.070496 422.521790,774.508240 421.703857,752.439209
         C424.294708,753.018860 424.052063,754.663574 424.320801,756.408325
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M431.664062,772.934814
         C431.655457,764.074646 431.967957,755.701782 431.189850,747.360596
         C437.467346,770.342957 438.310211,792.959900 426.656219,814.628357
         C428.872589,800.983826 431.529266,787.365784 431.664062,772.934814
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M657.339478,505.626251
         C669.369202,516.102783 677.662231,528.545532 681.550964,543.850525
         C670.622681,525.065125 656.917236,508.695435 639.948547,494.952301
         C646.387695,497.392883 651.858032,501.181244 657.339478,505.626251
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M407.405640,317.565643
         C411.436798,320.721039 414.690948,324.079529 416.841278,328.554321
         C401.418793,318.301331 386.348236,307.625092 368.222198,302.554810
         C382.868225,303.213837 395.896820,307.930389 407.405640,317.565643
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M815.439575,467.841614
         C796.827515,471.157318 778.625061,472.380951 760.459106,467.482056
         C780.803223,465.999084 801.273499,468.628693 822.037109,464.757233
         C820.294250,467.927246 817.723022,466.930542 815.439575,467.841614
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M727.074707,424.640656
         C728.898132,424.891052 730.509644,424.543030 731.543518,425.996674
         C723.457703,430.126801 687.869995,419.711182 679.435303,410.332458
         C695.083984,415.426239 710.413391,421.609528 727.074707,424.640656
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M376.684937,315.126526
         C391.636932,319.390015 403.909668,327.002258 413.141876,339.298340
         C398.647034,328.569824 383.196320,319.666229 366.062012,313.721344
         C369.778259,312.355286 372.973633,314.210175 376.684937,315.126526
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M518.005737,722.016113
         C524.060242,705.141235 524.353271,687.843506 524.371826,670.496155
         C528.792236,687.812561 528.934265,704.777222 520.486938,721.053223
         C520.022827,721.947449 519.688965,723.493591 518.005737,722.016113
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M586.941650,662.860107
         C587.939575,663.399414 587.689514,664.077393 587.320007,664.597961
         C579.186829,676.054565 576.611877,689.389038 574.350830,702.833557
         C574.246704,703.452515 574.047302,704.055481 573.842712,704.860962
         C568.017273,696.669495 575.340515,673.128479 586.941650,662.860107
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M515.563293,669.736572
         C516.623169,681.953308 517.642212,693.736816 512.550110,704.980774
         C513.833679,687.393433 513.247314,669.931580 509.860291,652.130676
         C512.704163,654.848145 514.602600,661.009094 515.563293,669.736572
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M367.717712,324.641022
         C366.192596,324.037689 364.779419,323.906982 363.979309,321.798676
         C382.804321,325.703430 397.979156,334.444824 408.924225,350.043976
         C396.463074,339.735382 383.502716,330.236633 367.717712,324.641022
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M350.199951,446.683105
         C350.182617,447.837372 350.115051,448.631256 350.047485,449.425140
         C343.606781,433.047424 336.289276,417.502258 320.680908,407.554291
         C324.838379,407.778442 327.830963,410.073486 330.773926,412.333649
         C341.978424,420.938446 347.046509,433.079163 350.199951,446.683105
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M493.196777,655.830078
         C491.994507,653.299561 489.847900,651.652222 489.641235,648.944092
         C498.767426,652.248779 507.289612,680.605286 502.928864,693.010925
         C501.888977,680.130676 499.167084,667.715637 493.196777,655.830078
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M370.855530,360.166595
         C362.692169,354.192200 353.895081,350.045227 343.853607,345.555786
         C356.740997,345.493469 380.494781,360.365814 385.064484,371.673004
         C380.248199,368.136749 376.118286,363.704498 370.855530,360.166595
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M391.995911,349.998016
         C383.702423,342.326416 374.355469,336.805115 364.765289,331.637085
         C377.597443,332.733734 396.895599,347.080994 402.694489,360.413696
         C398.524261,356.347839 395.390869,353.292908 391.995911,349.998016
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M387.142761,359.859253
         C378.923218,351.332733 369.878784,344.448914 358.697510,338.771179
         C370.368927,338.652313 392.323456,358.115021 396.598724,369.639313
         C392.256348,366.837219 390.402191,362.874084 387.142761,359.859253
-      z"/>
-      <path fill={isActive || isHovered ? hoverColor : color} opacity="1.000000" stroke="none"
+      z"
+      />
+      <path
+        fill={isActive || isHovered ? hoverColor : color}
+        opacity="1.000000"
+        stroke="none"
         d="
       M415.961243,452.142090
         C417.583740,450.874542 417.676086,452.466919 417.863983,453.119904
         C421.463776,465.628998 423.185577,478.361755 422.168427,491.394196
         C422.104095,492.218384 421.929596,493.033417 420.011810,494.109711
         C419.760498,479.767731 419.347076,465.917908 415.961243,452.142090
-      z"/>
+      z"
+      />
     </svg>
   );
-};
+}
 
 export default SmallDogIcon;

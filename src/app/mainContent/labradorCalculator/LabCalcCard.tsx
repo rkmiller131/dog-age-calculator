@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import LabInput from './LabInput';
 import LabOutput from './LabOutput';
 
@@ -15,14 +15,16 @@ const LabCalcCard: React.FC<labCalcCardProps> = () => {
       <h2 className="p-[0.5rem] text-xl/8 pr-[2.25rem] pl-[2.25rem] pt-[1rem] text-center leading-7 md:text-2xl">
         New, improved formula based on Labradors
       </h2>
-      <LabInput setHumanAge={setHumanAge} setBadAgeInput={setBadAgeInput}/>
-      {badAgeInput && <span className="text-error-red mt-[0.1rem]">
+      <LabInput setHumanAge={setHumanAge} setBadAgeInput={setBadAgeInput} />
+      {badAgeInput && (
+      <span className="text-error-red mt-[0.1rem]">
         *Please enter a number
-      </span>}
-      <LabOutput humanAge={humanAge} badInputAge={badAgeInput}/>
-      <span className="opacity-25 mt-[2rem] mb-[1rem] md:text-xl">{'16ln(age) + 31'}</span>
+      </span>
+      )}
+      <LabOutput humanAge={humanAge} badInputAge={badAgeInput} />
+      <span className="opacity-25 mt-[2rem] mb-[1rem] md:text-xl">16ln(age) + 31</span>
     </div>
   );
-}
+};
 
 export default LabCalcCard;
