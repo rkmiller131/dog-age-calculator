@@ -41,6 +41,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(circle, #FDF6CB, #FFD648)',
         'yellow-gradient': 'linear-gradient(rgba(248, 212, 141, 0.4), transparent)',
         'gradient': 'linear-gradient(to top, rgba(0, 0, 0, 1), transparent)',
+        'yellow-btn-gradient': 'linear-gradient(to bottom, #C8652F, #FCD372);',
+        'blue-btn-gradient': 'linear-gradient(to bottom, #3E93CC, #7BDBFF);',
         'main-bg': 'url("/park.png")',
         'dogs': 'url("/dogs.png")',
         'labs': 'url("/labs.png")',
