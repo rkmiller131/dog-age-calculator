@@ -61,6 +61,9 @@ const config: Config = {
           '50%': { transform: 'rotate(-8deg) translate(10px, -8px)' },
         },
       },
+      content: {
+        'link': 'url("/mousePointer.png")',
+      },
     },
   },
   plugins: [],
