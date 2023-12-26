@@ -24,12 +24,12 @@ function PageContent() {
           onClick={toggleTheme}
           className={`relative
             ${labTheme
-              ? 'bg-blue-btn-gradient xl:hover:text-[#724D2F] xl:hover:bg-none xl:hover:bg-blue-btn'
-              : 'bg-yellow-btn-gradient xl:hover:text-orange xl:hover:bg-none xl:hover:bg-yellow-btn'
+              ? 'bg-yellow-btn-gradient xl:hover:text-orange xl:hover:bg-none xl:hover:bg-yellow-btn'
+              : 'bg-blue-btn-gradient xl:hover:text-[#724D2F] xl:hover:bg-none xl:hover:bg-blue-btn'
             }
           before:absolute before:content-[''] before:bg-[rgba(255,255,255,0.2)] before:top-0 before:left-[4%] before:w-[92%] before:h-[45%] before:rounded-3xl rounded-3xl border-2 border-solid border-black p-[0.5rem] pr-[1rem] pl-[1rem] text-drk-blue self-center xl:hover:shadow-[inset_4px_4px_5px_rgba(0,0,0,0.3)] font-primary mt-[1.25rem] after:content-[url("/mousePointer.png")] after:flex after:z-10 after:absolute after:right-[0.25rem] xl:after:content-none sm:text-xl md:text-2xl md:mt-[2rem] xl:w-[80%] xl:pt-[1rem] xl:pb-[1rem] 4xl:w-[70%] 4xl:pt-[1.25rem] 4xl:pb-[1.25rem]`}
         >
-          {labTheme ? 'General Calculator' : 'Labrador Logarithm'}
+          {labTheme ? 'Labrador Logarithm' : 'General Calculator'}
         </button>
       </div>
       {labTheme ? <LabCalcCard /> : <GeneralCalcCard />}
