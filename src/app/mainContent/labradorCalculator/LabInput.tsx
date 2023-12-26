@@ -20,8 +20,11 @@ const LabInput: React.FC<LabInputProps> = ({ setHumanAge, setBadAgeInput }) => {
 
     if (validResult) {
       const calculatedHumanAge = Math.round(16 * Math.log(Number(value)) + 31);
-      console.log('valid entry and age is ', calculatedHumanAge);
-      setHumanAge(calculatedHumanAge);
+      if (calculatedHumanAge < 0) {
+        setHumanAge(3);
+      } else {
+        setHumanAge(calculatedHumanAge);
+      }
     }
   };
 
